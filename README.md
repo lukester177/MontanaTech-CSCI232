@@ -14,8 +14,8 @@ In this lab, you will become familiar with GitHub as well as the importance of i
   - On the school computers, use the Windows Standalone Installer (64-bit)
   - **Keep clicking 'next' in installer until the install begins**
  
-- Visual Studio Community: [download link](https://visualstudio.microsoft.com/vs/community/)
-  - This is not needed but is recommended when dealing with C++ code.
+- Visual Studio Code: [download link](https://code.visualstudio.com/download)
+  - This is not needed but is recommended when dealing with a Git repository locally
 
 ## Instructions
 
@@ -57,7 +57,33 @@ Since you made changes to your README.md file, you need to sync those changes wi
    - Example: C:\Users\willa\OneDrive\Desktop\MontanaTech-CSCI232
 2. Open your command prompt
 3. Navigate to your chosen directory using `cd <chosen directory path>`
-4. Run the command `git status`
-   - This will give you the status of your local files compared to your GitHub repository
+4. Run the command `git pull`
+   - This will give pull all files from your GitHub repository and add all changes to your local machine
    - Since your local machine is behind your GitHub (you made changes on GitHub without syncing them on your local machine) you should see:
-     
+     ```
+     ...
+     from <GitHub link>
+       <version number> <branch name (most likely 'main')> -> origin/<branch name>
+     Updating <version number>
+     Fast-forward
+       <file name> | <number of changes> + (for file insertion) - (for file deletion)
+       <# of files changed> changed, <# of insertions> insertions(+), <# of deletions> deletions(-)
+     ```
+     For example, mine looks like:
+     ```git
+     ...
+     From https://github.com/WillAugustine/MontanaTech-CSCI232
+       461f6fe..70c64d1 main    -> origin/main
+     Updating 461f6fe..70c64d1
+     Fast-forward
+       README.md | 24 ++++++++++++++++++++++++-
+       1 file changes, 23 insertions(+), 1 deletion(-)
+     ```
+     Now your local machine has the same files as your online GitHub repository
+
+### Creating The .gitignore File
+**NOTE: It is recommended to download Visual Studio Code before proceeding** (see [above](https://github.com/WillAugustine/MontanaTech-CSCI232/edit/main/README.md#downloads) for instructions)<br>
+Sometimes, there are files or folders on your local machine that you do not want to be on your online GitHub repository. Adding a .gitignore file to your local machine's files will make it so, when you want to add your local changes to your GitHub repository, it will not add the files specified in the .gitignore file.
+1. Open Visual Studio Code
+2. Open the folder that contains all of your GitHub files on your local machine
+   - Example: C:\Users\willa\OneDrive\Desktop\MontanaTech-CSCI232
