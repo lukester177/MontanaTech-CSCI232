@@ -38,4 +38,26 @@ In this lab, you will become familiar with GitHub as well as the importance of i
 
 ### Modifying The README.md File
 1. On GitHub, navigate to the main page of your forked repository
-
+2. Click the pencil button at the top right of the README.md file
+3. Add a section header titled "Submission Information" before the "Objectives" section (make it a second-level header)
+4. Within the "Submission Information" section, add the following:<br>
+   **NOTE: All information in this section should have a bolded title** (ex. "**Name:** Will Augustine")
+   - Name: Your name
+   - Course: Course number, section number, and course name
+   - Due: Assignment due date
+   - GitHub: Have the text "view the rest of my GitHub here" be a link that, when clicked, takes them to your GitHub profile page.
+   - Favorites: Say what you are ranking (ex. ice cream flavors) followed by a numbered list of your **top three** favorites
+5. Click the "Commit changes..." button
+6. Add a description about the changes you made (it can be brief)
+7. Keep the "Commit directly to the main branch" button checked and click "Commit changes"
+  
+### Getting Changes From GitHub To Your Local Machine
+Since you made changes to your README.md file, you need to sync those changes with the files that are on your local machine. This will make sure that you are up-to-date and can add your changes from your local machine to your GitHub when the time comes.
+1. Copy the path of your chosen directory **including your repository name** that you chose in the "Cloning A Repository To Your Local Machine" section
+   - Example: C:\Users\willa\OneDrive\Desktop\MontanaTech-CSCI232
+2. Open your command prompt
+3. Navigate to your chosen directory using `cd <chosen directory path>`
+4. Run the command `git status`
+   - This will give you the status of your local files compared to your GitHub repository
+   - Since your local machine is behind your GitHub (you made changes on GitHub without syncing them on your local machine) you should see:
+     
