@@ -2,7 +2,7 @@
 In this lab, you will become familiar with GitHub as well as the importance of it.
 
 ## Objectives
-- Learn how to fork
+- Learn how to fork a repository
 - Learn how to clone a repository
 - Learn how to modify README.md file
 - Learn how to get changes to cloned GitHub repository on local machine
@@ -16,6 +16,7 @@ In this lab, you will become familiar with GitHub as well as the importance of i
  
 - Visual Studio Code: [download link](https://code.visualstudio.com/download)
   - This is not needed but is recommended when dealing with a Git repository locally
+  - [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/) is recommended when manipulating C++/C# code or when dealing with project solutions (``.sln`` file endings). Since we are not manipualting any of the code in this lab, Visual Studio Code will suffice.
 
 ## Instructions
 
@@ -24,7 +25,7 @@ In this lab, you will become familiar with GitHub as well as the importance of i
    - This will create a copy of the main repository (by Will Augustine) into your account so you can modify and update the files.
   
 ### Cloning A Repository To Your Local Machine
-**NOTE: You will have to download Git before proceeding** (see [above](https://github.com/WillAugustine/MontanaTech-CSCI232/edit/main/README.md#downloads) for instructions)
+**NOTE: You will have to download Git before proceeding** (see [above](https://github.com/WillAugustine/MontanaTech-CSCI232#downloads) for instructions)
 1. Decide where you want the repository to live on your local machine (Desktop is recommended). **DO NOT use a flash drive**
 2. Copy the path of your chosen directory (easiest to use file explorer for Windows)
    - Example: C:\Users\willa\OneDrive\Desktop
@@ -82,8 +83,35 @@ Since you made changes to your README.md file, you need to sync those changes wi
      Now your local machine has the same files as your online GitHub repository
 
 ### Creating The .gitignore File
-**NOTE: It is recommended to download Visual Studio Code before proceeding** (see [above](https://github.com/WillAugustine/MontanaTech-CSCI232/edit/main/README.md#downloads) for instructions)<br>
+**NOTE: It is recommended to download Visual Studio Code before proceeding** (see [above](https://github.com/WillAugustine/MontanaTech-CSCI232#downloads) for instructions)<br>
 Sometimes, there are files or folders on your local machine that you do not want to be on your online GitHub repository. Adding a .gitignore file to your local machine's files will make it so, when you want to add your local changes to your GitHub repository, it will not add the files specified in the .gitignore file.
 1. Open Visual Studio Code
-2. Open the folder that contains all of your GitHub files on your local machine
+2. Open the folder that contains all of your GitHub files on your local machine in Visual Studio Code
    - Example: C:\Users\willa\OneDrive\Desktop\MontanaTech-CSCI232
+3. In the "Explorer" tab, you should see all files in your selected folder
+4. Add a new file to the base directory named ``.gitignore``
+   - Your new .gitignore file should be highlighted green in the Visual Studio Code Explorer tab with a ``U`` to the right of the file name
+5. Add information to the ``.gitignore`` file to prevent the following from being on GitHub:
+   - The whole ``NOT-Important`` directory and its contents
+   - All Python files (files ending in ``.py`` in the ``SEMI-Important`` directory
+   - The ``.vs`` directory in the ``Important`` directory
+   - The ``Important.vcxproj.filters`` file from the ``Important`` directory
+   - The ``Important.vcxproj.user`` file from the ``Important`` directory<br>
+     **NOTE: Follow the above instructions very closely. For example, when it says to remove all Python files, remove all Python files in one line not one file at a time.**
+
+### Adding Local Changes to GitHub
+When you created your ``.gitignore`` file in Visual Studio Code, you may have noticed the file turned green with a ``U`` appearing to the right of the file name. This is because you are modifying the files in your GitHub repository on your local machine. Here are the following symbols and what they mean:
+- ``U``: Untracked file - a file you have on your local machine but not on your online GitHub
+- ``M``: Modified file - a file you have on both your local machine and your online GitHub, but there are differences between the files
+- ``D``: Deleted file - a file you have on your online GitHub but it was removed from your local machine
+If you have any of these symbols next to your files, that means there are changes on your local machine that need to be added to your online GitHub. To add these local changes to your online GitHub, follow these steps:
+1. If you have Visual Studio Code still open, you can open a new terminal within Visual Studio Code by clicking ``New Terminal`` in the ``Terminal`` drop down menu. If you closed Visual Studio Code already, you can either reopen it and the file where your local repository is, or you can open a command prompt and navigate to your local GitHub files using the ``cd`` command like in the [Modifying the README.md File](https://github.com/WillAugustine/MontanaTech-CSCI232#modifying-the-readmemd-file) section
+2. It is recommended to get all changes from your online GitHub to your local machine before you add your local changes to your online GitHub. To do this, in the command prompt or the Visual Studio Code terminal, run the command ``git pull``
+3. 
+4. To add your local changes to your online GitHub, you first need to specify what files you want to add from your local machine. This can be done by adding all of the file names to the command, or you can use the shortcut to add all files that have been modified, added, and deleted in one simple command. **Select and run either of these commands**. Here are the commands for each option:
+   - For selecting certain files: ``git add <file name> <file name>``
+     - For this lab, the command would be ``git add .gitignore``
+   - For selecting all modified, added, and deleted files: ``git add -A``<br>
+5. After selecting the file(s) you want to sync with your online GitHub, you need to add a brief message describing the changes you made. To do this, you create a **commit** which will contain information including the commit number, the files you are modifying, and the message about your changes. If you cannot fit a description of your changes in one or two brief but descriptive sentences, you may need to split up your commit.
+   - To create a commit, use the ``git commit -m "<message>"`` command.
+     - For this lab, an example would be ``git commit -m "Added .gitignore file to remove unnecessary files and folders"``
