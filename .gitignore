@@ -1,0 +1,5 @@
+# Ignore Pythong files
+*.py
+
+# Ignore .vs within Important
+/Important/.vs/
