@@ -107,7 +107,7 @@ When you created your ``.gitignore`` file in Visual Studio Code, you may have no
 If you have any of these symbols next to your files, that means there are changes on your local machine that need to be added to your online GitHub. To add these local changes to your online GitHub, follow these steps:
 1. If you have Visual Studio Code still open, you can open a new terminal within Visual Studio Code by clicking ``New Terminal`` in the ``Terminal`` drop down menu. If you closed Visual Studio Code already, you can either reopen it and the file where your local repository is, or you can open a command prompt and navigate to your local GitHub files using the ``cd`` command like in the [Modifying the README.md File](https://github.com/WillAugustine/MontanaTech-CSCI232#modifying-the-readmemd-file) section
 2. It is recommended to get all changes from your online GitHub to your local machine before you add your local changes to your online GitHub. To do this, in the command prompt or the Visual Studio Code terminal, run the command ``git pull``
-3. 
+3. Check the differences between your local files and your online GitHub files. This can be done by running the command ``git status``. You should see information like your branch name, if you are ahead or behind, and any files or directories that are modified, untracked, or deleted.
 4. To add your local changes to your online GitHub, you first need to specify what files you want to add from your local machine. This can be done by adding all of the file names to the command, or you can use the shortcut to add all files that have been modified, added, and deleted in one simple command. **Select and run either of these commands**. Here are the commands for each option:
    - For selecting certain files: ``git add <file name> <file name>``
      - For this lab, the command would be ``git add .gitignore``
@@ -115,3 +115,4 @@ If you have any of these symbols next to your files, that means there are change
 5. After selecting the file(s) you want to sync with your online GitHub, you need to add a brief message describing the changes you made. To do this, you create a **commit** which will contain information including the commit number, the files you are modifying, and the message about your changes. If you cannot fit a description of your changes in one or two brief but descriptive sentences, you may need to split up your commit.
    - To create a commit, use the ``git commit -m "<message>"`` command.
      - For this lab, an example would be ``git commit -m "Added .gitignore file to remove unnecessary files and folders"``
+6. Now you need to add the commit to the online GitHub. To do this, you will **push** your changes by using the ``git push`` command.
