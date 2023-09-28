@@ -22,7 +22,14 @@ In this lab, you will become familiar with GitHub as well as the importance of i
 
 ### Forking A Repository
 1. Click the "fork" button in the upper right
-   - This will create a copy of the main repository (by Will Augustine) into your account so you can modify and update the files.
+   - This will create a copy of the main repository (by Will Augustine) into your account so you can modify and update the files.<br>
+   
+**Since you have your own repository now, I need access to it for grading. To do this, add me as a collaborator:**
+
+1. Within your new repository, click the ``Settings`` button at the top of the page
+2. In the left menu under **Access**, click ``Collaborators``
+3. Click the green ``Add people`` button
+4. Use my email to add me as a collaborator: **william_augustine@hotmail<span>.</span>com**
   
 ### Cloning A Repository To Your Local Machine
 **NOTE: You will have to download Git before proceeding** (see [above](https://github.com/WillAugustine/MontanaTech-CSCI232#downloads) for instructions)
@@ -98,12 +105,14 @@ Sometimes, there are files or folders on your local machine that you do not want
    - The ``Important.vcxproj.filters`` file from the ``Important`` directory
    - The ``Important.vcxproj.user`` file from the ``Important`` directory<br>
      **NOTE: Follow the above instructions very closely. For example, when it says to remove all Python files, remove all Python files in one line not one file at a time.**
+6. Since the files we want to ignore are already on the online GitHub, we need to tell the local files to forget everything that is on the online GitHub. This way we can remove the files listed in our .gitignore file from the online GitHub. To do this, we need to run the command ``git rm --cached -r .``. This removes (``rm``) **ALL** known files (``.``) from the online GitHub (the ``--cached`` files) recursively or including the files in sub-directories (``-r``). Now, all of your file should be green (untracked) or red (deleted). The files that are red are the files from your .gitignore file. <br>
+**NOTE: Deleted files will not be deleted from your local files, just from the online GitHub**
 
 ### Adding Local Changes to GitHub
 When you created your ``.gitignore`` file in Visual Studio Code, you may have noticed the file turned green with a ``U`` appearing to the right of the file name. This is because you are modifying the files in your GitHub repository on your local machine. Here are the following symbols and what they mean:
 - ``U``: Untracked file - a file you have on your local machine but not on your online GitHub
 - ``M``: Modified file - a file you have on both your local machine and your online GitHub, but there are differences between the files
-- ``D``: Deleted file - a file you have on your online GitHub but it was removed from your local machine
+- ``D``: Deleted file - a file you have on your online GitHub but it was removed or ignored from your local machine
 If you have any of these symbols next to your files, that means there are changes on your local machine that need to be added to your online GitHub. To add these local changes to your online GitHub, follow these steps:
 1. If you have Visual Studio Code still open, you can open a new terminal within Visual Studio Code by clicking ``New Terminal`` in the ``Terminal`` drop down menu. If you closed Visual Studio Code already, you can either reopen it and the file where your local repository is, or you can open a command prompt and navigate to your local GitHub files using the ``cd`` command like in the [Modifying the README.md File](https://github.com/WillAugustine/MontanaTech-CSCI232#modifying-the-readmemd-file) section
 2. It is recommended to get all changes from your online GitHub to your local machine before you add your local changes to your online GitHub. To do this, in the command prompt or the Visual Studio Code terminal, run the command ``git pull``
