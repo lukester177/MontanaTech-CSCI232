@@ -1,6 +1,17 @@
 # Montana Tech GitHub Basics Lab
 In this lab, you will become familiar with GitHub as well as the importance of it.
 
+## Submission Information
+**Name**: Luke McAlpine
+**Class**: CSCI232, Sec 01, Data Structures and Algorithms
+**Due**: ?
+**GitHub**: View the rest of my GitHub here: github.com/lukester177
+**Favorites**: Ranking of licorice flavors
+Top 3 licorice flavors:
+1. Black
+2. Red
+3. Anything but chocolate
+
 ## Objectives
 - Learn how to fork a repository
 - Learn how to clone a repository
